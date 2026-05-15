@@ -12,4 +12,4 @@ RUN dotnet publish "HenrexLibraryNowAPI/HenrexLibraryNowAPI.csproj" -c Release -
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/out .
-ENTRYPOINT ["dotnet", "HenrexLibraryNowAPI.dll"]S
+ENTRYPOINT ["dotnet", "HenrexLibraryNowAPI.dll"]
