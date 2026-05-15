@@ -6,7 +6,7 @@ ENV ASPNETCORE_URLS=http://+:8080
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS build
 WORKDIR /src
 COPY . .
-RUN dotnet restore "HenrexLibraryNowAPI/HenrexLibraryNowAPI.csproj"
+RUN dotnet restore "HenrexLibraryNowAPI.csproj"
 RUN dotnet publish "HenrexLibraryNowAPI/HenrexLibraryNowAPI.csproj" -c Release -o /app/out
 
 FROM base AS final
